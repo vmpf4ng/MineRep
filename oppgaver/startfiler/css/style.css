@@ -1,0 +1,274 @@
+/* -----------------------------------------------------
+   Setter standard box-sizing slik at padding og border
+   inkluderes i elementets totale bredde og høyde.
+----------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+/* -----------------------------------------------------
+   Setter hovedfont for hele nettsiden.
+   Bruker en trygg sans-serif fontstack.
+----------------------------------------------------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+   display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+/* -----------------------------------------------------
+   Legger til rom rundt innholdet i header-seksjonen
+   for bedre luft og struktur.
+----------------------------------------------------- */
+header section {
+    padding: 3rem;
+   ;
+}
+
+/* -----------------------------------------------------
+   Navigasjonsfeltet får lys grå bakgrunn og jevn padding.
+----------------------------------------------------- */
+nav {
+    background-color: #efefef;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+/* -----------------------------------------------------
+   Logoen i navigasjonen:
+   - Stor skrift for tydelighet
+   - Tykk skriftvekt for vektlegging
+   - Negativ letter-spacing for tett tekst
+   - Fjernet understreking
+   - Svart tekstfarge for kontrast
+----------------------------------------------------- */
+nav #logo {
+    font-size: 25px;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    letter-spacing: -5px;
+    text-decoration: none;
+    color: #000;
+   
+}
+
+/* -----------------------------------------------------
+   Navigasjonsliste:
+   - Fjerner standard margin og punktmerking
+   - Sentrerer tekst
+----------------------------------------------------- */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* -----------------------------------------------------
+   Navigasjonslenker:
+   - Gir rom rundt lenketeksten
+   - Fjerner understreking
+   - Setter fargen til svart for god lesbarhet
+----------------------------------------------------- */
+nav ul li a {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+/* -----------------------------------------------------
+   Hver oddetalls-seksjon i main får mørk bakgrunn og hvit tekst
+   for visuell variasjon.
+----------------------------------------------------- */
+main section:nth-child(odd) {
+    background-color: #1e4772;
+    color: #fff;
+}
+
+/* -----------------------------------------------------
+   Indre seksjoner i main får horisontal padding
+   for bedre luft rundt tekst.
+----------------------------------------------------- */
+main section section {
+    padding: 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#change-order figure {
+    order: -1;
+    
+   
+}
+
+/* -----------------------------------------------------
+   Grunnleggende knappestil:
+   - Hvit kant og tekst for kontrast
+   - Jevn padding og margin for luft
+   - Ingen understreking
+----------------------------------------------------- */
+.btn {
+   display: inline-flex;
+    padding: 1rem;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+/* -----------------------------------------------------
+   Seksjonen #tjenester:
+   - Gir rikelig med padding rundt innholdet
+----------------------------------------------------- */
+#tjenester {
+    padding: 3rem;
+    
+}
+
+/* -----------------------------------------------------
+   Artikler i #tjenester:
+   - Lys grå bakgrunn for tydelig avgrensning
+   - Jevn padding for luft rundt tekst
+----------------------------------------------------- */
+#tjenester article {
+    background-color: #efefef;
+    padding: 2rem;
+}
+
+/* -----------------------------------------------------
+   Spesiell styling for booking-artikkelen:
+   - Mørk blå bakgrunn og hvit tekst for kontrast
+----------------------------------------------------- */
+#tjenester #booking {
+    background-color: #1e4772;
+    color: #fff;
+}
+
+/* -----------------------------------------------------
+   Footer:
+   - Mørk bakgrunn for kontrast
+   - Hvit tekst for lesbarhet
+   - Romslig padding rundt innhold
+----------------------------------------------------- */
+footer {
+    background-color: #383735;
+    color: #fff;
+    padding: 3rem;
+}
+
+/* -----------------------------------------------------
+   Footer-seksjoner:
+   - Minimumsbredde for å sikre plass til innhold
+----------------------------------------------------- */
+footer section {
+    min-width: 300px;
+}
+
+/* -----------------------------------------------------
+   Footer-logo:
+   - Stor og fet tekst
+   - Negativ bokstavavstand for kompakt uttrykk
+   - Fjernet understreking
+   - Hvit tekstfarge
+----------------------------------------------------- */
+#footer-logo {
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    letter-spacing: -5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* -----------------------------------------------------
+   Lenker i footer:
+   - Hvit tekst for kontrast mot mørk bakgrunn
+----------------------------------------------------- */
+footer a {
+    color: #fff;
+}
+
+/* -----------------------------------------------------
+   Lister i footer:
+   - Fjerner punktmerking og standard margin/padding
+----------------------------------------------------- */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* -----------------------------------------------------
+   Listeelementer i footer:
+   - Vertikal avstand for luft mellom elementene
+----------------------------------------------------- */
+footer ul li {
+    padding: 1rem 0;
+}
+
+/* -----------------------------------------------------
+   Overskrifter (h2):
+   - Full bredde slik at de strekker seg over hele linjen
+----------------------------------------------------- */
+h2 {
+    width: 100%;
+}
+
+/* -----------------------------------------------------
+   Sosiale medier-ikoner:
+   - Fjerner punktmerking
+   - Nullstiller margin og padding
+----------------------------------------------------- */
+#some {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* -----------------------------------------------------
+   Ikoner i sosiale medier:
+   - Stor skriftstørrelse for tydelige symboler
+----------------------------------------------------- */
+#some i {
+    font-size: 40px;
+}
+
+/* NETTBRETT / DESKTOP */
+@media (min-width: 680px) {
+   nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav #logo {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+         flex-direction: row;
+         width: auto;
+    }
+
+    #change-order figure {
+        order: 0;
+    }
+}
+
+/* STOR DESKTOP */
+@media (min-width: 1200px) {}
